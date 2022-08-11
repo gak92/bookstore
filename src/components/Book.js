@@ -1,10 +1,13 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const { id, title, author, category } = props;
+  const {
+    id, title, author, category,
+  } = props;
 
   return (
-    <div className="book-div">
+    <div className="book-div" id={id}>
 
       <div className="book-info">
         <div>
@@ -20,7 +23,7 @@ const Book = (props) => {
       </div>
 
       <div className="book-status">
-        <div className="status-circle"></div>
+        <div className="status-circle" />
         <p>64%</p>
         <p>Completed</p>
       </div>
@@ -32,6 +35,13 @@ const Book = (props) => {
       </div>
     </div>
   );
+};
+
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
