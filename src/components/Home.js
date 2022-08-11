@@ -4,7 +4,7 @@ import BooksList from "./BooksList";
 
 const Home = () => {
   return (
-    <main>
+    <main className="home-main">
       <BooksList />
       <hr />
       <BookForm />
