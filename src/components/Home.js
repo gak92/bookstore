@@ -1,9 +1,13 @@
 import React from "react";
+import BookForm from "./BookForm";
+import BooksList from "./BooksList";
 
 const Home = () => {
   return (
     <main>
-      <h1>home page</h1>
+      <BooksList />
+      <hr />
+      <BookForm />
     </main>
   );
 };
