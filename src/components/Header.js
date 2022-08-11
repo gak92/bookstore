@@ -1,18 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <h1>Bookstore CMS</h1>
-      <nav>
-        <ul>
-          <li>
-            Books
-          </li>
-          <li>
-            Categories
-          </li>
-        </ul>
+      <nav className="navbar">
+        <NavLink to='/' className="navitem">Books</NavLink>
+        <NavLink to='/categories' className="navitem">Categories</NavLink>
       </nav>
     </header>
   );
