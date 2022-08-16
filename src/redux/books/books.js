@@ -1,9 +1,10 @@
+import { v4 as uuidv4 } from 'uuid';
+
 // ACTIONS
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = [];
-const bookId = 0;
 
 // REDUCER
 const booksReducer = (state = initialState, action) => {
@@ -21,7 +22,7 @@ const booksReducer = (state = initialState, action) => {
 export const addBook = (title, author) => ({
   type: ADD_BOOK,
   payload: {
-    id: bookId + 1,
+    id: uuidv4(),
     title,
     author,
   },
