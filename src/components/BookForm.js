@@ -7,8 +7,13 @@ const BookForm = () => {
 
   const handleAddBook = (e) => {
     e.preventDefault();
-    dispatch(addBook(e.target.title.value, e.target.author.value));
-    e.target.reset();
+    const title = e.target.title.value;
+    const author = e.target.author.value;
+
+    if (title && author) {
+      dispatch(addBook(e.target.title.value, e.target.author.value));
+      e.target.reset();
+    }
   };
 
   return (
