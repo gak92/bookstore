@@ -4,7 +4,26 @@ import { v4 as uuidv4 } from 'uuid';
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: '1',
+    title: 'The hunger games',
+    author: 'Suzanne Collins',
+    category: 'Action',
+  },
+  {
+    id: '2',
+    title: 'Dune',
+    author: 'Frank Herbert',
+    category: 'Science Fiction',
+  },
+  {
+    id: '3',
+    title: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+    category: 'Economy',
+  },
+];
 
 // REDUCER
 const booksReducer = (state = initialState, action) => {
