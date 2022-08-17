@@ -11,7 +11,6 @@ const BooksList = () => {
   }, []);
 
   const books = useSelector((state) => state.books);
-  console.log(books);
 
   return (
     <section className="book-list">

@@ -67,8 +67,6 @@ export const addBook = (id, title, author, category) => async (dispatch) => {
 
 export const removeBook = (id) => async (dispatch) => {
   const url = `${requestedURL}/${id}`;
-  console.log('URL: ', url);
-  console.log('ID: ', id);
   const response = await fetch(url, {
     method: 'DELETE',
     body: JSON.stringify({ item_id: id }),
@@ -76,13 +74,14 @@ export const removeBook = (id) => async (dispatch) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  console.log('Response: ', response);
-  dispatch({
-    type: REMOVE_BOOK,
-    payload: {
-      id,
-    },
-  });
+  if (response.status === 201) {
+    dispatch({
+      type: REMOVE_BOOK,
+      payload: {
+        id,
+      },
+    });
+  }
 };
 
 export default booksReducer;
