@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
 });
 
 const store = configureStore(
-  rootReducer,
+  { reducer: rootReducer },
   applyMiddleware(thunk),
 );
 
