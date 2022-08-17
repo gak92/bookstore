@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
@@ -7,11 +8,13 @@ const BookForm = () => {
 
   const handleAddBook = (e) => {
     e.preventDefault();
+    const id = uuidv4();
     const title = e.target.title.value;
     const author = e.target.author.value;
+    const category = 'Action';
 
     if (title && author) {
-      dispatch(addBook(e.target.title.value, e.target.author.value));
+      dispatch(addBook(id, title, author, category));
       e.target.reset();
     }
   };
