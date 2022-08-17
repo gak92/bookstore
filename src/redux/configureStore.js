@@ -8,9 +8,9 @@ const rootReducer = combineReducers({
   categories: categoriesReducer,
 });
 
-const store = configureStore({
-  reducer: rootReducer,
-  applyMiddleware(thunk)
-});
+const store = configureStore(
+  rootReducer,
+  applyMiddleware(thunk),
+);
 
 export default store;
