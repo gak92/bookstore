@@ -8,13 +8,15 @@ const BookForm = () => {
 
   const handleAddBook = (e) => {
     e.preventDefault();
-    const id = uuidv4();
-    const title = e.target.title.value;
-    const author = e.target.author.value;
-    const category = 'Action';
+    const book = {
+      id: uuidv4(),
+      title: e.target.title.value,
+      author: e.target.author.value,
+      category: 'Action',
+    };
 
-    if (title && author) {
-      dispatch(addBook(id, title, author, category));
+    if (book.title && book.author) {
+      dispatch(addBook(book));
       e.target.reset();
     }
   };
