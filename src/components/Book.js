@@ -10,7 +10,7 @@ const Book = (props) => {
 
   const dispatch = useDispatch();
 
-  const handleRemoveBook = () => {
+  const handleRemoveBook = (id) => {
     dispatch(removeBook(id));
   };
 
@@ -25,7 +25,7 @@ const Book = (props) => {
         </div>
         <div className="book-btns">
           <button type="button">Comments</button>
-          <button type="button" onClick={handleRemoveBook}>Remove</button>
+          <button type="button" onClick={() => handleRemoveBook(id)}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
