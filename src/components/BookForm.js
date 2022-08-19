@@ -31,7 +31,7 @@ const BookForm = () => {
           name="author"
           placeholder="Enter name of the author"
         />
-        <button type="submit">Add Book</button>
+        <button type="submit" className="btn-add-book">Add Book</button>
       </form>
     </section>
   );

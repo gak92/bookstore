@@ -8,6 +8,9 @@ const Header = () => (
       <NavLink to="/" className="navitem">Books</NavLink>
       <NavLink to="/categories" className="navitem">Categories</NavLink>
     </nav>
+    <div className="user-icon">
+      <i className="fa-solid fa-user" />
+    </div>
   </header>
 );
 
