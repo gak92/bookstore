@@ -14,7 +14,6 @@ const BooksList = () => {
 
   return (
     <section className="book-list">
-      <h2>List of Books</h2>
       {
         books.map((book) => (
           <Book
