@@ -247,3 +247,25 @@ body {
   letter-spacing: 0.5px;
   cursor: pointer;
 }
+
+.categories-main {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+}
+
+.btn-check-status {
+  border: none;
+  border-radius: 0.1rem;
+  background-color: #0290ff;
+  color: #fff;
+  padding: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
