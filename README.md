@@ -21,7 +21,7 @@
 
 ## Live Demo
 
-[Live Demo coming soon...](#)
+[Live Demo](https://ghaz-bookstore.netlify.app/)
 
 ## Getting Started
 
